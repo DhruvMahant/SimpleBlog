@@ -13,6 +13,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://use.fontawesome.com/51327f0aec.js"></script>
+<script src="blog.js"></script>
     <link href="css/style.css" rel="stylesheet" />
 
 </head>
@@ -23,7 +24,7 @@
             <div class="tm-row pt-4">
                 <div class="tm-col-left">
                     <div class="tm-site-header media">
-                        <i class="fas fa-umbrella-beach fa-3x mt-1 tm-logo"></i>
+                        <img src="./image/food-truck.png" class="tm-logo" width="53px" height="47px"/>
                         <div class="media-body">
                             <h1 class="tm-sitename text-uppercase">Food Paradise</h1>
                         </div>        
@@ -61,7 +62,7 @@
                 
                 <div class="tm-col-left">
                    <section class = "tm-content">
-                    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#blogForm" aria-expanded="false" aria-controls="collapseExample">
+                    <button class="btn btn-primary rounded-pill" type="button" data-toggle="collapse" data-target="#blogForm" aria-expanded="false" aria-controls="collapseExample">
                        Add Blog
                       </button>
                       <br/>
@@ -76,15 +77,15 @@
                                         <h4 class="text-md-center white">Add New Blog</h4>
                                         <br/>
                                         <div class="form-group border border-white">
-                                            <input type="text" class="form-control white" placeholder="   Title">
+                                            <input type="text" id="title" class="form-control white" placeholder="   Title">
                                         </div>
-                                        <textarea id="editor" cols="32" rows="10"  class="border border-white">  Description of the blog </textarea>
+                                        <textarea id="description" cols="32" rows="10"  class="border border-white">  Description of the blog </textarea>
                                         <br>
                                         <div class="form-group">
-                                            <input type="text" class="form-control border border-white" placeholder="   Tags">
+                                            <input type="text" id="tags"class="form-control border border-white" placeholder="   Tags">
                                         </div>
                                         <div class="form-group">
-                                            <button class="btn btn-primary" id="submit">Submit new post</button>
+                                            <button class="btn btn-primary rounded-pill" id="submit" onclick="addBlog()">Submit new post</button>
                                         </div>
                                     </div>
                                 
@@ -99,18 +100,22 @@
                 <!--Right Side of the page -->
                 <main class="tm-col-right">
                     
-                    <section class="tm-content">
+                    <section class="tm-content" id="blogplace">
                         <div class="media my-3 mb-5 tm-blog-media tm-blog-media-img-l">
                            <a href="https://pinchofyum.com/30-minute-vegetarian-meatballs"><img src="https://pinchofyum.com/wp-content/uploads/Cauliflower-Meatballs-2.jpg"  alt="Image" width="200" height="200" class="tm-blog-img"></a>
                             <div class="media-body tm-blog-text">
                                 <h2 class="mb-4 tm-content-title"><a href="https://pinchofyum.com/30-minute-vegetarian-meatballs">30-minute vegetarian meatballs</a></h2>
-                                <p>Our template is simple and effective. This is an alternating simple content with a squared size image. Menu hover is #9CC and text #FFF</p>
+                                <p>Make easy and quick vegetarian meatballs which will have great taste and fill you belly. To know the recipes click on the title.</p>
+                                <a href="#" class="badge badge-pill badge-primary"> Italian </a>
                             </div> 
                         </div>
                         <div class="media my-3 mb-5 tm-blog-media">                            
                             <div class="media-body tm-blog-text">
                                 <h2 class="mb-4 tm-content-title"><a href="https://mallikabasu.com/2015/05/17/quick-punjabi-dal-fry/">Quick Punjabi Dal Fry</a></h2>
                                 <p>Easy to make and Quick to make Dal Fry recipes which will satisfy your hunger. Its a very popular dish in india. Click on image or tilte to know the recieps.</p>
+                                <a href="#" class="badge badge-pill badge-primary"> Indian </a>
+                            
+                            
                             </div> 
                             <a href="https://mallikabasu.com/2015/05/17/quick-punjabi-dal-fry/"><img src="https://mallikabasu.com/wp-content/uploads/2015/05/Punjabi-dal-750x500.jpg"  alt="Image" width="300" height="200" class="tm-blog-img"></a>
                         </div>
@@ -120,6 +125,8 @@
                                 <h2 class="mb-4 tm-content-title"><a href="https://www.mexicoinmykitchen.com/fresh-salsa-roja/">Fresh Salsa Roja- Raw Red Salsa</a></h2>
                                 <p>You are free to use this template for your website either commercial or personal.</p>
                                 <p>You are NOT allowed to redistribute this template ZIP file for a download purpose on any template collection website.</p>
+                                <a href="#" class="badge badge-pill badge-primary"> Mexican </a>
+                            
                             </div> 
                         </div>                      
                     </section>
