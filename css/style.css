@@ -244,6 +244,16 @@ textarea {
     }
 }
 
+.border{
+    border-width: 3px !important;
+}
+
+a{
+    color: white;
+}
+a:hover{
+    color:#F88E28;
+}
 @media (max-width: 992px) {    
     .tm-nav {
         position: absolute;
