@@ -13,7 +13,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/51327f0aec.js"></script>
+    <script src="contact.js"></script>
         <link href="css/style.css" rel="stylesheet" />
+        
 
 </head>
 <body>
@@ -60,19 +62,34 @@
                 <main class="tm-col-right tm-contact-main"> <!-- Content -->
                     <section class="tm-content tm-contact">
                         <h2 class="mb-4 tm-content-title">Contact Us</h2>
-                        <p class="mb-85">Etiam et egestas arcu. Fusce congue quis elit vitae commodo. Cras neque mauris, vehicula in ipsum sit amet, faucibus aliquam arcu.</p>
-                        <form id="contact-form" action="" method="POST">
+                        <p class="mb-85">For any inquireies or feedback please use the contact for and someone will contact back to you soon. Thank you</p>
+                        <form id="contact-form" name="contact-form" action="" ></form>
                             <div class="form-group mb-4">
-                                <input type="text" name="name" class="form-control" placeholder="Name" required="" />
+                                <input type="text" name="name" class="form-control" id="txtname" placeholder="Name" />
+                                <div class="alert alert-danger rounded" id="nameError" style="display:none;">
+                                    <strong>Error!</strong> Invalid Name!!!.
+                                  </div>
                             </div>
                             <div class="form-group mb-4">
-                                <input type="email" name="email" class="form-control" placeholder="Email" required="" />
+                                <input  name="email" class="form-control" id="txtemail" placeholder="Email" />
+                                <div class="alert alert-danger rounded" id="emailError" style="display:none;">
+                                    <strong>Error!</strong> Invaild Email!!.
+                                  </div>
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="email" name="phonenumber" id="phnNum" class="form-control" placeholder="Phone Number" />
+                                <div class="alert alert-danger rounded" id="phnNumError" style="display:none;">
+                                    <strong>Error!</strong> Invalid Phone Number!!.
+                                  </div>
                             </div>
                             <div class="form-group mb-5">
-                                <textarea rows="6" name="message" class="form-control" placeholder="Message..." required=""></textarea>
+                                <textarea rows="6" name="message" id="txtmsg" class="form-control" placeholder="Message..." ></textarea>
+                                <div class="alert alert-danger rounded" id="msgError" style="display:none;">
+                                    <strong>Error!</strong> Invalid Message!!.
+                                  </div>
                             </div>
                             <div class="text-right">
-                                <button type="submit" class="btn btn-big btn-primary">Send It</button>
+                                <button  onclick="contact()" class="btn btn-big btn-primary">Send It</button>
                             </div>
                         </form>
                     </section>
@@ -82,11 +99,11 @@
 
         <div class="tm-row">
             <div class="tm-col-left text-center">            
-                <ul class="tm-bg-controls-wrapper">
+                <!-- <ul class="tm-bg-controls-wrapper">
                     <li class="tm-bg-control active" data-id="0"></li>
                     <li class="tm-bg-control" data-id="1"></li>
                     <li class="tm-bg-control" data-id="2"></li>
-                </ul>            
+                </ul>             -->
             </div>        
             <div class="tm-col-right tm-col-footer">
                 <footer class="tm-site-footer text-right">

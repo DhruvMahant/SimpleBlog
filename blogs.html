@@ -76,13 +76,26 @@
                                     <div class="col-lg-6 " >
                                         <h4 class="text-md-center white">Add New Blog</h4>
                                         <br/>
-                                        <div class="form-group border border-white">
-                                            <input type="text" id="title" class="form-control white" placeholder="   Title">
+                                        <div class="form-group ">
+                                            <label>Title</label>
+                                            <input type="text" id="title" class=" rounded border border-white form-control " >
+                                            <div class="alert alert-danger rounded" id="titleError" style="display:none;">
+                                                <strong>Error!</strong> <a id="titleErrTxt"></a>.
+                                              </div>
                                         </div>
-                                        <textarea id="description" cols="32" rows="10"  class="border border-white">  Description of the blog </textarea>
+                                        <label>Description</label>
+                                        <textarea id="description" cols="32" rows="10"  class="border rounded border-white"></textarea> <br/>
+                                        <div class="alert alert-danger rounded" id="desError" style="display:none;">
+                                            <strong>Error!</strong> <a id="desErrTxt"></a>.
+                                          </div>
                                         <br>
                                         <div class="form-group">
-                                            <input type="text" id="tags"class="form-control border border-white" placeholder="   Tags">
+                                            <label>Tags</label>
+                                            <input type="text" id="tags"class="rounded form-control border border-white">
+                                            <div class="alert alert-danger rounded" id="tagError" style="display:none;">
+                                                <strong>Error!</strong> <a id="tagErrTxt"></a>.
+                                              </div>
+                                        
                                         </div>
                                         <div class="form-group">
                                             <button class="btn btn-primary rounded-pill" id="submit" onclick="addBlog()">Submit new post</button>
@@ -123,8 +136,7 @@
                             <a href="https://www.mexicoinmykitchen.com/fresh-salsa-roja/"><img src="https://dam.cocinafacil.com.mx/wp-content/uploads/2018/04/molcajete-salsa-roja-asada.jpg"  alt="Image" width="250" height="200" class="tm-blog-img"></a>
                             <div class="media-body tm-blog-text">
                                 <h2 class="mb-4 tm-content-title"><a href="https://www.mexicoinmykitchen.com/fresh-salsa-roja/">Fresh Salsa Roja- Raw Red Salsa</a></h2>
-                                <p>You are free to use this template for your website either commercial or personal.</p>
-                                <p>You are NOT allowed to redistribute this template ZIP file for a download purpose on any template collection website.</p>
+                                <p>This is a very famous salsa in mexico. Even though this salsa is made up of chilles, it's not spicy and have amazing flavor. To know the recipes, click on the title.</p>
                                 <a href="#" class="badge badge-pill badge-primary"> Mexican </a>
                             
                             </div> 

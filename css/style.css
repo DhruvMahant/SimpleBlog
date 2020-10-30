@@ -254,6 +254,10 @@ a{
 a:hover{
     color:#F88E28;
 }
+.carousel-inner img {
+    width: 86%;
+    height: 86%;
+  }
 
 .badge{
     background-color:#F88E28 ;
